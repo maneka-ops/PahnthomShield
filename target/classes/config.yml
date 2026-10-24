@@ -1,0 +1,51 @@
+settings:
+  default-duration-minutes: 30
+  persist-after-restart: true
+  # Show a live shield countdown in the player's action bar every second
+  action-bar-timer: true
+  phantom-protection:
+    prevent-targeting: true
+    prevent-attacks: true
+    suppress-natural-spawning-near-player: true
+    spawn-suppression-radius: 32.0
+
+item:
+  material: TRIPWIRE_HOOK
+  name: '&cPhantom Shield Key'
+  glowing: true
+  lore:
+    - '&7Right-click to activate'
+    - '&7Duration: &f%duration% minutes'
+
+messages:
+  prefix: '&8[&cPhantom Shield&8] '
+
+  # Activation / expiry
+  activated: '&aPhantom Shield activated for &f%duration% minutes&a!'
+  already-active: '&eYour Phantom Shield is already active.'
+  expired: '&cYour Phantom Shield has expired. Phantoms can target you again!'
+  key-received: '&aYou received &f%amount% &aPhantom Shield Key(s).'
+
+  # Status
+  protection-active: '&aActive &8- &f%time% remaining'
+  protection-inactive: '&cInactive'
+
+  # Warnings (sent once per threshold)
+  warning-5min: '&eYour Phantom Shield will expire in &f5 minutes&e! Prepare yourself.'
+  warning-1min: '&c\u26A0 Your Phantom Shield expires in &f1 minute&c!'
+
+  # Action bar (shown every second while shield is active)
+  action-bar: '&b\uD83D\uDEE1 &f%time% &7remaining'
+
+  # List command
+  list-header: '&8&m---------&r &cActive Protections &8&m---------'
+  list-entry:  '  &f%player% &8\u2192 &a%time% remaining'
+  list-empty:  '&7There are no active protections.'
+
+  # Admin / misc
+  protection-revoked: '&cYour Phantom Shield has been revoked by an admin.'
+  protection-revoked-admin: '&aProtection revoked for &f%player%&a.'
+  no-permission: '&cYou do not have permission to do that.'
+  player-not-found: '&cPlayer not found or not online.'
+  reloaded: '&aConfiguration reloaded successfully.'
+  usage: '&eUsage: &f/phantomshield <give|activate|status|revoke|list|reload>'

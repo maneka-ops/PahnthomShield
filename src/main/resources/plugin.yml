@@ -1,0 +1,18 @@
+name: PhantomShield
+version: 1.0.0
+main: dev.evolutionz.phantomshield.PhantomShieldPlugin
+api-version: '1.21'
+author: EvolutionZ Developers
+description: Timed, player-specific protection from phantoms.
+commands:
+  phantomshield:
+    description: Manage Phantom Shield keys and protection.
+    usage: /phantomshield <give|activate|status|revoke|list|reload>
+    aliases: [pshield]
+permissions:
+  phantomshield.use:
+    description: Activate a Phantom Shield Key.
+    default: true
+  phantomshield.admin:
+    description: Manage Phantom Shield.
+    default: op
